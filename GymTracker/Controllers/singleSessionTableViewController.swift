@@ -78,8 +78,6 @@ class singleSessionTableViewController: UITableViewController {
         if editingStyle == .delete {
             session.exercises.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
-            //Session.saveToFiles(sessions: sessions)
-            //sessions = Session.loadFromFile()!
         }
     }
     

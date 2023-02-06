@@ -10,16 +10,14 @@ import UIKit
 class editExerciseTableViewController: UITableViewController {
     
     var sessionIndex = 0
-    
     var exerciseIndex = 0
-    
-    var sessions: [Session] = []
+    var sessions: [Session] = Session.loadFromFile()!
 
     @IBOutlet weak var repsTopLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        sessions = Session.loadFromFile()!
         repsTopLabel.text = "Reps: \(sessions[sessionIndex].exercises[exerciseIndex].reps)"
     }
 

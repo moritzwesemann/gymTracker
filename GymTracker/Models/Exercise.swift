@@ -9,10 +9,8 @@ import Foundation
 
 
 struct Exercise: Codable{
-    
     var title: String
     var sets: Int
     var reps: Int
     var weight: [Int: Int]
-    
 }

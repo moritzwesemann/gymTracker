@@ -22,6 +22,7 @@
 		8EE75258298E5872000E4D4A /* editExerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE75257298E5872000E4D4A /* editExerciseTableViewCell.swift */; };
 		8EE7525A298E58B0000E4D4A /* editExerciseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE75259298E58B0000E4D4A /* editExerciseTableViewController.swift */; };
 		8EE7525C298EDB6F000E4D4A /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE7525B298EDB6F000E4D4A /* Exercise.swift */; };
+		8EE7525F298FD824000E4D4A /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE7525E298FD824000E4D4A /* StatisticsViewController.swift */; };
 		8EEF949A298C37B800E57BA0 /* singleSessionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEF9499298C37B800E57BA0 /* singleSessionTableViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		8EE75257298E5872000E4D4A /* editExerciseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editExerciseTableViewCell.swift; sourceTree = "<group>"; };
 		8EE75259298E58B0000E4D4A /* editExerciseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editExerciseTableViewController.swift; sourceTree = "<group>"; };
 		8EE7525B298EDB6F000E4D4A /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		8EE7525E298FD824000E4D4A /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
 		8EEF9499298C37B800E57BA0 /* singleSessionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = singleSessionTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,10 +78,9 @@
 		8E73F93F2988EAFB00D007E5 /* GymTracker */ = {
 			isa = PBXGroup;
 			children = (
-				8EE7525D298EDBA1000E4D4A /* Storyboards */,
+				8EE7525D298EDBA1000E4D4A /* Views */,
 				8EE75256298E583A000E4D4A /* Controllers */,
 				8EEF949B298C3DDB00E57BA0 /* Models */,
-				8EE75254298E57EE000E4D4A /* Cells */,
 				8EE75255298E5823000E4D4A /* Delegates */,
 				8E73F9492988EAFC00D007E5 /* Assets.xcassets */,
 				8E73F94E2988EAFC00D007E5 /* Info.plist */,
@@ -110,6 +111,8 @@
 		8EE75256298E583A000E4D4A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8EE75254298E57EE000E4D4A /* Cells */,
+				8EE7525E298FD824000E4D4A /* StatisticsViewController.swift */,
 				8EE7524E298D800E000E4D4A /* addExerciseTableViewController.swift */,
 				8EEF9499298C37B800E57BA0 /* singleSessionTableViewController.swift */,
 				8E73F9582988EEF100D007E5 /* SessionTableViewController.swift */,
@@ -119,13 +122,13 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		8EE7525D298EDBA1000E4D4A /* Storyboards */ = {
+		8EE7525D298EDBA1000E4D4A /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				8E73F9462988EAFB00D007E5 /* Main.storyboard */,
 				8E73F94B2988EAFC00D007E5 /* LaunchScreen.storyboard */,
 			);
-			path = Storyboards;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		8EEF949B298C3DDB00E57BA0 /* Models */ = {
@@ -221,6 +224,7 @@
 				8E73F9592988EEF100D007E5 /* SessionTableViewController.swift in Sources */,
 				8E73F95F2989482A00D007E5 /* Session.swift in Sources */,
 				8EE7524F298D800E000E4D4A /* addExerciseTableViewController.swift in Sources */,
+				8EE7525F298FD824000E4D4A /* StatisticsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
