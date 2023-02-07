@@ -26,12 +26,12 @@ class SessionTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         tableView.reloadData()
     }
     
     
     // MARK: - Table view data source
+    
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -41,14 +41,12 @@ class SessionTableViewController: UITableViewController {
         return sessions.count
     }
     
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SessionCell", for: indexPath) as! SessionTableViewCell
         let session = sessions[indexPath.row]
         cell.update(with: session)
         return cell
     }
-    
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
@@ -74,22 +72,20 @@ class SessionTableViewController: UITableViewController {
         performSegue(withIdentifier: "singleSession", sender: self)
     }
     
+
+    
     
     @IBAction func unwindToSessionsScene(_ segue: UIStoryboardSegue){
         if let sourceViewController = segue.source as? CreateNewSessionTableViewController,
            let session = sourceViewController.session {
             
-            if let selectedIndexPath = tableView.indexPathForSelectedRow{
-                sessions[selectedIndexPath.row] = session
-                tableView.reloadRows(at: [selectedIndexPath], with: .automatic)
-            } else {
-                let newIndexPath = IndexPath(row: sessions.count, section: 0)
-                sessions.append(session)
-                tableView.insertRows(at: [newIndexPath], with: .automatic)
-            }
+            let newIndexPath = IndexPath(row: sessions.count, section: 0)
+            sessions.append(session)
+            tableView.insertRows(at: [newIndexPath], with: .automatic)
             
             sessions = sessions.sorted(by: {$0.date.compare($1.date) == .orderedDescending})
             tableView.reloadData()
         }
     }
+    
 }

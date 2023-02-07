@@ -50,7 +50,8 @@ class editExerciseTableViewCell: UITableViewCell {
         self.exercise = exercise
         self.sessionIndex = sessionIndex
         self.exerciseIndex = exerciseIndex
-        setLabel.text = "Set: \(set)"
+        setLabel.text = "Set: \(set + 1)"
+        
         
         if let weight = exercise.weight[set] {
             weightTextField.text = String(weight)

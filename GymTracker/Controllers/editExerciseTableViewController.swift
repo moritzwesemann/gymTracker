@@ -14,11 +14,13 @@ class editExerciseTableViewController: UITableViewController {
     var sessions: [Session] = Session.loadFromFile()!
 
     @IBOutlet weak var repsTopLabel: UILabel!
+    @IBOutlet weak var exerciseTitleLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         repsTopLabel.text = "Reps: \(sessions[sessionIndex].exercises[exerciseIndex].reps)"
+        exerciseTitleLabel.text = sessions[sessionIndex].exercises[exerciseIndex].title
     }
 
     // MARK: - Table view data source

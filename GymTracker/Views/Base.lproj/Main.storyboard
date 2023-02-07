@@ -464,8 +464,10 @@
         <!--Navigation Controller-->
         <scene sceneID="6j4-3e-CpW">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5bN-uO-czg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="z9Q-aj-Bfw" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Lwf-ow-xgR"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="YOF-kY-nWP">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -475,7 +477,6 @@
                         <segue destination="EZD-63-OqH" kind="relationship" relationship="rootViewController" id="bQH-nG-Buo"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5bN-uO-czg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-524.4274809160305" y="905.63380281690149"/>
         </scene>
@@ -497,7 +498,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DYo-ei-Qv2">
+                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DYo-ei-Qv2">
                                                     <rect key="frame" x="20" y="11" width="353" height="28"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -622,8 +623,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reps: ?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dQM-7P-OrI">
+                        <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Fdw-bf-snL">
                             <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reps: ?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dQM-7P-OrI">
+                            <rect key="frame" x="0.0" y="178.33333206176758" width="393" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
@@ -689,6 +697,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="sLc-0I-V47"/>
                     <connections>
+                        <outlet property="exerciseTitleLabel" destination="Fdw-bf-snL" id="2t8-NA-NK7"/>
                         <outlet property="repsTopLabel" destination="dQM-7P-OrI" id="RvM-Oy-BmN"/>
                     </connections>
                 </tableViewController>

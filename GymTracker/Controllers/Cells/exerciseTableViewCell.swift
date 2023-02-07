@@ -25,6 +25,8 @@ class exerciseTableViewCell: UITableViewCell {
 
 
     func update(with exercise: Exercise){
+        
+        
         exerciseNameLabel.text = exercise.title
         
         setsLabel.text = "Sets: \(exercise.sets)"
